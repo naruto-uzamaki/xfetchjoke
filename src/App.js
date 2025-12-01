@@ -19,7 +19,7 @@ function App() {
       setJoke(null);
       const res = await fetch("https://official-joke-api.appspot.com/random_joke");
       if (!res.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${res.status}`);
       }
       const data = await res.json();
       setJoke(data);
