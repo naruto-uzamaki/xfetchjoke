@@ -51,7 +51,7 @@ function App() {
             fontSize: "1rem"
           }}
         >
-          Try Again
+          Try again
         </button>
       </div>);
     }
