@@ -18,6 +18,9 @@ function App() {
       setError(false);
       setJoke(null);
       const res = await fetch("https://official-joke-api.appspot.com/random_joke");
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       const data = await res.json();
       setJoke(data);
       setIsLoading(false);
